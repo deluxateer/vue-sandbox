@@ -1,0 +1,155 @@
+:root {
+  --primary-color: hsl(136, 100%, 33%);
+  --primary-dark: hsl(136, 100%, 21%);
+  --form-spacing: 1.3rem;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.3rem 2.5rem;
+}
+
+ul { list-style: none; }
+
+li {
+  display: inline-block;
+}
+
+li + li { margin-left: 1rem; }
+
+li a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+header li {
+  text-transform: uppercase;
+}
+
+.top-selling {
+  background-color: hsl(0, 0%, 95%);
+  padding: 4rem 1rem 8rem;
+}
+
+.top-selling h2 {
+  font-size: 2.8rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 2rem;
+}
+
+.product {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.product-img {
+  border-radius: 5px 5px 0 0;
+}
+
+.product-details {
+  padding: 1.3rem;
+}
+
+.product-info h3,
+.product-info p,
+.product-sizes,
+.price {
+  margin-bottom: 1rem;
+}
+
+.sign-up-cta {
+  color: #fff;
+  background-color: var(--primary-color);
+  padding: 8rem 1rem;
+}
+
+.sign-up-cta .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cta-info {
+  flex: 2;
+  font-size: 1.3rem;
+}
+
+.cta-info h2 {
+  font-size: 2.6rem;
+  margin-bottom: 2rem;
+}
+
+.cta-form-wrapper {
+  font-size: 1.3rem;
+}
+
+.google-sign-up {
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.cta-form-wrapper { flex: 1.4; }
+
+.cta-form-wrapper > p {
+  text-align: center;
+  margin: var(--form-spacing) 0;
+}
+
+input {
+  font-size: 1.125rem;
+  width: 100%;
+  padding: 1.3rem;
+  border: none;
+  border-radius: 5px;
+}
+
+input:not(:first-child) {
+  margin-top: var(--form-spacing);
+}
+
+.form-legal {
+  font-size: 0.9rem;
+  margin-top: var(--form-spacing);
+}
+
+input[type="submit"] {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--primary-color);
+  background-color: #fff;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--primary-dark);
+  padding: 2rem 3rem;
+  color: #fff
+}
+
+footer a {
+  color: #fff;
+}

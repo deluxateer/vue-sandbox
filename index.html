@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <navbar></navbar>
+      <main>
+        <section class="top-selling">
+          <div class="container">
+            <h2>Check Out What's Trending</h2>
+            <p style="font-weight: 700; text-align: end; margin-bottom: 1rem;">Cart: {{cart}}</p>
+            <div class="product-grid">
+              <product
+                @add-to-cart="updateCart"
+                v-for="product in products"
+                :key="product.id"
+                :product-data="product"></product>
+            </div>
+          </div>
+        </section>
+        <section class="sign-up-cta">
+          <div class="container">
+            <div class="cta-info">
+              <h2>Sign up for Evernote Today</h2>
+              <p>Capture ideas and inspiration from anywhere and manage tasks with ease.</p>
+            </div>
+            <div class="cta-form-wrapper">
+              <div class="google-sign-up">
+                Sign up free with Google
+              </div>
+              <p>OR</p>
+              <form>
+                <input name="email" type="email" placeholder="Email">
+                <input name="password" type="password" placeholder="Password">
+                <p class="form-legal">By clicking below, I agree to the Terms of Service and Privacy Policy.</p>
+                <input type="submit" value="Sign Up For Free">
+              </form>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer>
+        <div class="footer-legal">
+          &copy; Evernote 2019
+        </div>
+        <nav class="nav-legal">
+          <ul>
+            <li><a href="#!">Terms of Service</a></li>
+            <li><a href="#!">Privacy Policy</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
